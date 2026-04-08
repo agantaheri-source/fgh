@@ -1,0 +1,500 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Passo a Passo de CNH Gratuita no Brasil</title>
+    <style>
+        /* Reset e estilos base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Aviso obrigatório */
+        .warning {
+            background-color: #ff5252;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Navegação */
+        nav {
+            background-color: #2c3e50;
+            padding: 15px 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #3498db;
+        }
+        
+        /* Seções */
+        section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #3498db;
+            margin: 15px auto;
+        }
+        
+        .section-content {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        /* Listas */
+        ul.custom-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        ul.custom-list li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        
+        ul.custom-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+        
+        /* Botões */
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        /* Rodapé */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            margin-top: 20px;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Modal/Popup */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            overflow: auto;
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 700px;
+            position: relative;
+            animation: modalopen 0.5s;
+        }
+        
+        @keyframes modalopen {
+            from {opacity: 0; transform: translateY(-50px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #777;
+        }
+        
+        .close-btn:hover {
+            color: #333;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 5px 0;
+            }
+            
+            .section-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Aviso obrigatório -->
+    <div class="warning">
+        <p>ESTE NÃO É UM SITE OFICIAL DO GOVERNO. Este site é mantido por uma empresa privada e tem finalidade exclusivamente informativa e educacional.</p>
+    </div>
+    
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <h1>Guia Completo: CNH Gratuita no Brasil</h1>
+            <p>Tudo o que você precisa saber para obter sua Carteira Nacional de Habilitação sem custos</p>
+        </div>
+    </header>
+    
+    <!-- Navegação -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#finalidade">Finalidade do Site</a></li>
+                <li><a href="#guia">Guia Passo a Passo</a></li>
+                <li><a href="#" onclick="openModal('sobre')">Sobre Nós</a></li>
+                <li><a href="#" onclick="openModal('contato')">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Conteúdo principal -->
+    <main class="container">
+        <!-- Seção: Finalidade do Site -->
+        <section id="finalidade">
+            <h2 class="section-title">Finalidade do Site</h2>
+            <div class="section-content">
+                <p>Este site tem como única finalidade fornecer informações educativas sobre:</p>
+                <ul class="custom-list">
+                    <li>Processo de habilitação de condutores no Brasil</li>
+                    <li>Legislação de trânsito brasileira</li>
+                    <li>Procedimentos relacionados à CNH</li>
+                    <li>Direitos e deveres dos condutores</li>
+                </ul>
+                
+                <p style="margin-top: 20px; font-weight: bold;">NÃO realizamos serviços de:</p>
+                <ul class="custom-list">
+                    <li>Emissão de CNH</li>
+                    <li>Renovação de CNH</li>
+                    <li>Agendamento de exames</li>
+                    <li>Processamento de documentos junto ao Detran</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Seção: Guia passo a passo -->
+        <section id="guia">
+            <h2 class="section-title">Guia Passo a Passo: CNH Gratuita</h2>
+            
+            <div class="section-content">
+                <h3>O que é CNH gratuita?</h3>
+                <p>A CNH gratuita, também conhecida como CNH Social, é um programa do governo que oferece a possibilidade de tirar a primeira habilitação sem custos para pessoas de baixa renda. O programa é regulamentado pela Lei nº 12.302/2010 e implementado pelos Departamentos Estaduais de Trânsito (Detrans).</p>
+            </div>
+            
+            <div class="section-content">
+                <h3>Quem tem direito?</h3>
+                <p>Podem se candidatar à CNH gratuita pessoas que se enquadrem em pelo menos um dos seguintes critérios:</p>
+                <ul class="custom-list">
+                    <li>Estudantes com renda familiar per capita de até um salário mínimo</li>
+                    <li>Pessoas inscritas no CadÚnico (Cadastro Único para Programas Sociais)</li>
+                    <li>Beneficiários de programas sociais como Bolsa Família</li>
+                    <li>Pessoas com renda familiar de até dois salários mínimos</li>
+                    <li>Desempregados há mais de um ano</li>
+                </ul>
+                <p style="margin-top: 15px;">Os critérios podem variar conforme o estado, por isso é importante verificar as regras específicas do seu Detran local.</p>
+            </div>
+            
+            <div class="section-content">
+                <h3>Como se inscrever?</h3>
+                <p>O processo de inscrição geralmente segue estes passos:</p>
+                <ol style="padding-left: 30px; margin-top: 15px;">
+                    <li style="margin-bottom: 10px;">Acesse o site do Detran do seu estado</li>
+                    <li style="margin-bottom: 10px;">Procure pela seção de CNH Social ou CNH gratuita</li>
+                    <li style="margin-bottom: 10px;">Verifique se atende aos requisitos</li>
+                    <li style="margin-bottom: 10px;">Preencha o formulário de inscrição online</li>
+                    <li style="margin-bottom: 10px;">Anexe os documentos necessários (digitalizados)</li>
+                    <li style="margin-bottom: 10px;">Aguarde a análise e o resultado</li>
+                </ol>
+            </div>
+            
+            <div class="section-content">
+                <h3>Etapas do processo</h3>
+                <p>Após a aprovação da solicitação, o processo para obter a CNH gratuita segue as mesmas etapas do processo convencional:</p>
+                <ul class="custom-list">
+                    <li>Cadastro e emissão da LADV (Licença para Aprendizagem de Direção Veicular)</li>
+                    <li>Exames médicos e psicológicos</li>
+                    <li>Curso teórico-técnico (45 horas/aula)</li>
+                    <li>Prova teórica</li>
+                    <li>Curso prático de direção veicular (20 horas/aula)</li>
+                    <li>Exame de direção veicular</li>
+                    <li>Emissão da Permissão para Dirigir (CNH provisória)</li>
+                </ul>
+            </div>
+            
+            <div class="section-content">
+                <h3>Dicas importantes</h3>
+                <ul class="custom-list">
+                    <li>Mantenha todos os documentos pessoais atualizados</li>
+                    <li>Esteja atento aos prazos de cada etapa do processo</li>
+                    <li>Estude diligentemente para as provas teórica e prática</li>
+                    <li>Pratique bastante as aulas de direção</li>
+                    <li>Verifique regularmente a situação do seu processo no site do Detran</li>
+                    <li>Desconfie de propostas para "agilizar" seu processo - isso pode ser golpe</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2026 – Conteúdo Informativo</p>
+                <p>Empresa responsável: 63.788.823 Osvaldo dos Santos Belli - CNPJ: 63.788.823/0001-43</p>
+                <p>Este site tem finalidade exclusivamente educativa e informativa.</p>
+                <p>Não possui vínculo com o Detran, Senatran, Gov.br ou qualquer órgão governamental.</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#" onclick="openModal('privacidade')">Política de Privacidade</a> | 
+                <a href="#" onclick="openModal('termos')">Termos de Uso</a> | 
+                <a href="#" onclick="openModal('sobre')">Sobre Nós</a> | 
+                <a href="#" onclick="openModal('contato')">Contato</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Popups/Modais -->
+    <div id="privacidade" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('privacidade')">&times;</span>
+            <h2>Política de Privacidade</h2>
+            <p>Nós, da 63.788.823 Osvaldo dos Santos Belli., valorizamos sua privacidade e estamos comprometidos em proteger suas informações pessoais. Esta política explica como coletamos, usamos e protegemos seus dados.</p>
+            
+            <h3>Informações que coletamos</h3>
+            <p>Podemos coletar informações não identificáveis pessoalmente, como tipo de navegador, provedor de serviços de Internet, páginas referenciadas/saída, tipo de plataforma, carimbos de data/hora e dados de fluxo de cliques para analisar tendências e administrar o site.</p>
+            
+            <h3>Uso de informações</h3>
+            <p>Utilizamos as informações coletadas para melhorar a experiência do usuário, personalizar conteúdo, analisar tráfego e fornecer informações relevantes sobre serviços educacionais.</p>
+            
+            <h3>Compartilhamento de informações</h3>
+            <p>Não vendemos, comercializamos ou transferimos suas informações pessoais para terceiros.</p>
+            
+            <p>Última atualização: Janeiro de 2026</p>
+        </div>
+    </div>
+    
+    <div id="termos" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('termos')">&times;</span>
+            <h2>Termos de Uso</h2>
+            <p>Ao acessar e usar este site, você concorda em cumprir estes Termos de Uso.</p>
+            
+            <h3>Uso do Conteúdo</h3>
+            <p>Todo o conteúdo deste site é apenas para fins informativos e educacionais. As informações são fornecidas "como estão" sem garantias de qualquer tipo.</p>
+            
+            <h3>Limitação de Responsabilidade</h3>
+            <p>Não nos responsabilizamos por quaisquer erros ou omissões no conteúdo ou por quaisquer ações tomadas com base nas informações fornecidas neste site.</p>
+            
+            <h3>Propriedade Intelectual</h3>
+            <p>Todo o conteúdo, layout, código e design são de propriedade da 63.788.823 Osvaldo dos Santos Belli. e estão protegidos pelas leis de direitos autorais.</p>
+            
+            <h3>Alterações nos Termos</h3>
+            <p>Reservamo-nos o direito de modificar estes termos a qualquer momento. O uso continuado do site após quaisquer alterações constitui aceitação dos novos termos.</p>
+        </div>
+    </div>
+    
+    <div id="sobre" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('sobre')">&times;</span>
+            <h2>Sobre Nós</h2>
+            <p>A 63.788.823 Osvaldo dos Santos Belli. é uma empresa privada dedicada a fornecer informações educativas e de qualidade sobre processos burocráticos no Brasil.</p>
+            
+            <h3>Nossa Missão</h3>
+            <p>Democratizar o acesso à informação, ajudando cidadãos brasileiros a entenderem melhor seus direitos e os processos administrativos.</p>
+            
+            <h3>Informações da Empresa</h3>
+            <p><strong>Razão Social:</strong> 63.788.823 Osvaldo dos Santos Belli</p>
+            <p><strong>Nome Fantasia:</strong> Osvaldo dos Santos Belli</p>
+            <p><strong>CNPJ:</strong> 63.788.823/0001-43</p>
+            <p><strong>Data de Abertura:</strong> 24/11/2025</p>
+            <p><strong>Situação Cadastral:</strong> ATIVA</p>
+            
+            <h3>Endereço</h3>
+            <p>Rua Boa Vista, 40</p>
+            <p>Carapicuíba, São Paulo - SP</p>
+            <p>CEP: 06397-290</p>
+            
+            <h3>Contato</h3>
+            <p>Email: newpizza95@gmail.com</a></p>
+            <p>Telefone: (11) 99624-4151</p>
+        </div>
+    </div>
+    
+    <div id="contato" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('contato')">&times;</span>
+            <h2>Contato</h2>
+            <p>Entre em contato conosco para tirar dúvidas ou enviar sugestões.</p>
+            
+            <h3>Informações de Contato</h3>
+            <p><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="74041507071513011d341c1b0019151d185a171b19">[email&#160;protected]</a></p>
+            <p><strong>Telefone:</strong> (11) 99624-4151</p>
+            <p><strong>Endereço:</strong> Al Santos, 1165, Sala 11 CXPST 130287, Cerqueira Cesar, São Paulo - SP, CEP: 01.419-002</p>
+            
+            <h3>Horário de Atendimento</h3>
+            <p>Segunda a sexta-feira, das 9h às 18h.</p>
+            
+            <p>Respondemos todos os contatos em até 48 horas úteis.</p>
+        </div>
+    </div>
+    
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Funções para abrir e fechar os modais
+        function openModal(id) {
+            document.getElementById(id).style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Previne scroll quando modal está aberto
+        }
+        
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restaura scroll
+        }
+        
+        // Fechar modal clicando fora do conteúdo
+        window.onclick = function(event) {
+            let modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            }
+        }
+        
+        // Fechar modal com a tecla ESC
+        document.onkeydown = function(evt) {
+            evt = evt || window.event;
+            if (evt.keyCode == 27) {
+                let modals = document.getElementsByClassName('modal');
+                for (let i = 0; i < modals.length; i++) {
+                    if (modals[i].style.display == 'block') {
+                        modals[i].style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                }
+            }
+        };
+    </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"290a941bea8a4f6597ad7c10376982e5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
